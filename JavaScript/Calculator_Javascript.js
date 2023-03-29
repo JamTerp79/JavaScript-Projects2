@@ -18,7 +18,7 @@ function Input_Digit(digit) {
 function Input_Decimal(dot) {
     if (Calculator.Wait_Second_Operand === true) return;
     if (!Calculator.Display_Value.includes(dot)) {
-        Calculator.Display_Value =+ dot;
+        Calculator.Display_Value += dot;
     }
 }
 
@@ -48,7 +48,7 @@ const Perform_Calculation = {
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
     '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
-    '=': (_First_Operand, Second_Operand) => Second_Operand
+    '=': (First_Operand, Second_Operand) => Second_Operand
 };
 
 function Calculator_Reset() {
